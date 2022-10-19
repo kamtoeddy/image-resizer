@@ -55,7 +55,7 @@ async function resizeImage({ dest, imgPath, width, height }) {
     fs.writeFileSync(path.join(dest, filename), newPath);
 
     // send success message
-    mainWindow.webContents.send("image:resize-done");
+    mainWindow.webContents.send("image:resize-done", { done: true });
 
     // open destination folder
     shell.openPath(dest);

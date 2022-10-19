@@ -44,10 +44,7 @@ function sendImage(e) {
 }
 
 // listen for "image:resize-done" event
-ipcRenderer.on("image:resize-done", () => {
-  console.log("done");
-  showToast("Resize complete!");
-});
+ipcRenderer.on("image:resize-done", () => showToast("Resize complete!"));
 
 /**
  * Checks if provided file is valid
